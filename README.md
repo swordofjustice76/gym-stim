@@ -1,2 +1,5 @@
 # gym-stim
-The Gym Stim — compact gym-door pre-workout kit
+
+Private notes for **The Gym Stim** — compact gym-door pre-workout kit.
+
+Start here: [gym-stim-product-brief.md](./gym-stim-product-brief.md)
