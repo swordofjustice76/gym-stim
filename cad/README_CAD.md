@@ -1,27 +1,22 @@
-# GymStim CAD & Mechanisms
+# Gym Stim CAD — 44 x 145 Option C
 
-Parametric OpenSCAD models for the three-tier line (Lite / Mid / Elite) plus the screw-on shot capsule.
+OpenSCAD. Preview F5. Set EXPLODE = 1 in gymstim_assembly.scad to pull it apart.
+
+Replaces the old 38 x 190 / 10-tab / single-flask models.
+
+## How the three mechanisms move
+
+**A sniff puck** — Bayonet, three lugs. ~3.6 ml well in the puck. 4 mm pinhole + shutter disc. Twist shutter to align holes. Body never holds ammonia.
+
+**B chew clicker** — Cassette does not rotate. Two 18 mm wells, 4 discs each, followers keep both stacks on the same ceiling. One 18.4 mm neck. Left well hits a 2 mm ledge until the neck is empty. Button retracts the gate. Disc leaves an 18.5 x 7 mm oval window under the button. Reload: unscrew C, pull cassette out the bottom of B.
+
+**C powder** — Three 120 deg wedges. End cap is the orifice plate with one ROUND 10 mm hole. Wedges keyed so they do not spin. Body pip points at 1 / 2 / 3. Invert to dump. Unscrew C at the waist, scoop into the open tops. Not through the dump hole.
 
 ## Files
-- `gymstim_body.scad` — main parametric body (38 mm × 190 mm), three tactile zones, shared consumable spine.
-- `gymstim_chew_gate.scad` — B3 one-click gate (Elite/Mid) and Lite gravity variant.
-- `gymstim_flask.scad` — 70 ml (Lite ~90 ml) screw-off flask with C3 taper pour + desiccant puck.
-- `gymstim_salt_cap.scad` — Elite-only A5 replaceable salt cap with twist port.
-- `gymstim_shot_capsule.scad` — standalone pre-workout shot capsule (screw-on shaker style).
-- `gymstim_assembly.scad` — exploded + assembled views for visualization.
-- `README_CAD.md` — this file.
 
-## How to view
-1. Open any `.scad` in OpenSCAD (free) or paste into https://modelrift.com (browser, no install).
-2. Hit F5 for preview, F6 for render.
-3. Change the `tier` variable at the top: `"lite"`, `"mid"`, `"elite"`.
-
-## Design rules baked in
-- One clean cylinder, three tactile zones (knurl / smooth / knurl).
-- No visible seams between chambers.
-- Max two actions to dose anything (one hand, no billion caps).
-- Salts = Elite only (legal wall intact).
-- Same chew cassette + same flask across all tiers → shared consumable spine.
-- 3–4 day carry target via fill lines, not promises.
-
-See `gymstim_body.scad` for the master parameter block.
+- gymstim_params.scad — every number
+- gymstim_body.scad — tube, clip, pip, exit, button bore
+- gymstim_puck_a.scad — bayonet puck + shutter
+- gymstim_chew_b.scad — twin cassette, gate, button
+- gymstim_powder_c.scad — wedges + plate, which=1/2/3
+- gymstim_assembly.scad — stack it
