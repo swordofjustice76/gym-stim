@@ -1,60 +1,61 @@
-// GymStim body — parametric, three-tier (Lite / Mid / Elite)
-// 38 mm OD x 190 mm long. One CAD family, material + salt chamber change per tier.
-// Open in OpenSCAD or https://modelrift.com
+include <gymstim_params.scad>
 
-/* [Tier] */
-tier = "elite";          // "lite" | "mid" | "elite"
-
-/* [Body] */
-OD = 38;                 // outer diameter mm
-L  = 190;                // total length mm
-wall = 2.0;              // shell wall
-
-/* [Chambers - axial stack, top to bottom] */
-salt_h = 22;             // Chamber A (salts) - Elite only
-chew_h = 55;             // Chamber B (chews) - shared
-flask_h = 70;            // Chamber C (flask) - Lite pushes to ~90
-
-/* [Tactile zones] */
-knurl_pitch = 1.2;
-knurl_depth = 0.6;
-
-module knurl_ring(z0, h) {
-  // simple axial knurl via rotated cubes (preview-friendly)
-  for (a = [0 : 30 : 330])
+module knurl_band(z0, h) {
+  for (a = [0 : 15 : 345])
     rotate([0,0,a])
-      translate([OD/2 - knurl_depth, -0.4, z0])
-        cube([knurl_depth+0.2, 0.8, h]);
+      translate([OD/2 - 0.55, -0.35, z0]) cube([0.7, 0.7, h]);
 }
 
-module body_shell() {
+module body_tube() {
   difference() {
-    cylinder(d=OD, h=L, $fn=64);
-    translate([0,0,-1]) cylinder(d=OD-2*wall, h=L+2, $fn=64);
+    cylinder(d=OD, h=L);
+    translate([0,0,-1]) cylinder(d=ID, h=L+2);
+    translate([0,0,z_a])
+      for (i = [0:lug_n-1])
+        rotate([0,0,i*120])
+          translate([ID/2 - 1, -lug_w/2, 1]) cube([3, lug_w, lug_h+0.4]);
+    translate([OD/2 - 1, 0, z_b + b_h - throat_h - 1])
+      rotate([0,90,0])
+        hull() {
+          translate([0,  exit_w/2 - exit_h/2, 0]) cylinder(d=exit_h, h=wall+4);
+          translate([0, -(exit_w/2 - exit_h/2), 0]) cylinder(d=exit_h, h=wall+4);
+        }
+    translate([OD/2 - 1, 0, z_b + b_h - 4])
+      rotate([0,90,0]) cylinder(d=btn_d + 0.3, h=wall+4);
+    translate([0,0,z_bc - 0.2]) cylinder(d=ID+0.4, h=thread_h);
   }
 }
 
-module chamber_dividers() {
-  // thin internal walls separating A/B/C
-  translate([0,0,salt_h]) cylinder(d=OD-2*wall, h=1.2, $fn=64);
-  translate([0,0,salt_h+chew_h]) cylinder(d=OD-2*wall, h=1.2, $fn=64);
+module body_pip() {
+  translate([0, OD/2 - 0.2, orifice_h + 1])
+    rotate([90,0,0]) linear_extrude(0.6) polygon([[0,3],[-2,0],[2,0]]);
 }
 
-module tier_features() {
-  if (tier == "elite") {
-    knurl_ring(2, 14);                       // top knurl (salt zone)
-    knurl_ring(salt_h+chew_h+4, 16);         // bottom knurl (flask grip)
-  } else if (tier == "mid") {
-    knurl_ring(salt_h+chew_h+4, 16);         // flask grip only
-  } else { // lite - no salt chamber, shorter or bigger flask
-    knurl_ring(chew_h+4, 16);
-  }
+module clip_boss() {
+  translate([-OD/2 - 1.5, 0, L*0.45])
+    hull() {
+      cube([3.2, 8, 28], center=true);
+      translate([-1,0,12]) cube([2, 6, 4], center=true);
+    }
+}
+
+module dividers() {
+  translate([0,0,z_bc]) cylinder(d=ID - 0.2, h=div);
+  translate([0,0,z_ab]) cylinder(d=ID - 0.2, h=div);
 }
 
 module gymstim_body() {
-  body_shell();
-  chamber_dividers();
-  tier_features();
+  difference() {
+    union() {
+      body_tube();
+      clip_boss();
+      body_pip();
+      knurl_band(L - 14, 12);
+      knurl_band(orifice_h + wedge_h - 6, 10);
+    }
+    translate([0,0,-1]) cylinder(d=ID, h=L+2);
+  }
+  dividers();
 }
 
 gymstim_body();
