@@ -22,7 +22,8 @@ Twin-column B is the first time width also shortens the clicker. Needs **~40 mm 
 |---|---|---|---|---|---|
 | **A — lock** | 38 × 190 | Single column + side button | 8 | ~90 mm | Fat flashlight. Pocket |
 | **B — stubby pen** | 42 × 170 | Same single column | 8 | ~70 mm | 21700 torch. Still a pocket |
-| **C — can** | 44 × 145 | Twin column, **one throat**, one button | 8 (4+4) | ~67 mm | Soft-drink-can. Gym bag |
+| **C — can** | 44 × 145 | Twin column, **priority throat**, no rotate | 8 (4+4) | ~67 mm | Soft-drink-can. Gym bag |
+| **C2 — rotate** | 44 × 145 | **2×4 wells, 180° index each click** | 8 (4+4) | ~67 mm | Same can. Heavier clunk. No Y |
 | **D — turret** | 44 × ~150 | Carousel, see below | **3** in one ring, or **6** if two decks | ~67 mm | Same can, worse count unless double-deck |
 
 Do not go 50 mm. That is a puck with a clip.
@@ -33,58 +34,58 @@ Do not go 50 mm. That is a puck with a clip.
 
 Yes. A Y that lets two 18 mm discs into one 18 mm throat will jam the first time both springs move at once, a tab swells, or crumbs sit in the fork.
 
-What actually jams:
-- Two discs arriving together (double feed)
-- A broken/swollen chew thicker than 5.5 mm
-- Powder dust from C if the B/C wall leaks
-- A septum thinner than ~2 mm that flexes
-
-If option C is picked, **do not build an open Y**. Build a **priority throat**:
-
-- Hard single-file neck. Only one disc fits. Geometry, not hope.
-- A ledge / one-way flap so the second column cannot enter until the neck is empty.
-- “Taller stack wins” is allowed. A free rocker is how you get two-in-the-hole.
-- Wells hard-stopped at 4. You cannot stuff a fifth.
-
-Empty click + swap cassette is still the reload. Do not add a second button.
+If option C is picked, **do not build an open Y**. Build a **priority throat**: hard single-file neck, ledge so the second column cannot enter until the neck is empty, wells hard-stopped at 4.
 
 ---
 
 ## Rotating carousel — how many 18 mm discs fit
 
-Pockets around a shaft. Disc lies flat in an 18 mm well. Walls ~1.5 mm. Rotor has to run inside the tube.
+| Pockets | Body OD needed |
+|---|---|
+| 2 | ~44 mm (twin-column) |
+| 3 | ~46–48 mm |
+| 4 | ~51 mm |
+| 8 | ~75 mm |
 
-Bolt-circle math (spacing 20 mm centre to centre):
+8 × 18 mm in one ring is a hockey puck. Dead inside 44 mm.
 
-| Pockets | Rotor OD needed | Body OD needed | Fits 38? | Fits 44? |
-|---|---|---|---|---|
-| 2 | ~40 mm | ~44 mm | no | yes — that is just twin-column |
-| **3** | ~42 mm | **~46 mm** | no | **tight / no** at 44. Possible at 46–48 |
-| 4 | ~47 mm | ~51 mm | no | no |
-| 5 | ~53 mm | ~57 mm | no | no |
-| 6 | ~59 mm | ~63 mm | no | no |
-| 8 | ~71 mm | ~75 mm | no | no |
+---
 
-**8 × 18 mm in one ring needs a ~75 mm body.** That is a hockey puck. Dead.
+## 2 × 4 rotating cylinders (button indexes 180°)
 
-On-edge revolver (5.5 mm slot, 18 mm radial depth) is worse: the 18 mm eats the radius, so you still do not get 8 in a 44 mm can.
+Two wells, four discs each. One window. Press = spit one disc, then the rotor turns 180° so the other well faces the window next time. No Y. No two discs in one throat.
 
-### What a carousel *can* do
+```
+     [ window ]
+  well A (4)     well B (4)     <- 180 deg apart on one rotor
+     spring         spring
+     follower       follower     <- each stack held up to the same ceiling
+```
 
-- **3-shot ring** on a **46–48 mm** body. Worse than today’s 8-count.
-- **Double-deck 3+3 = 6** on that same fat body: two rings, 5.5 mm each + a plate. B height ~30–35 mm. You get 6, not 8, and a second index.
-- Indexing: detents every 120° (3-shot) or a ratchet the button advances one pocket. One click still equals one disc **if** the window only opens on a parked pocket. If they click off-detent, it jams or drops two.
+**This only works if each well has its own follower to a shared ceiling.**
+After the first click, A has 3 discs (16.5 mm) and B still has 4 (22 mm). If the stacks sit on the floor, A's next disc is 5.5 mm too low when it rotates back. Springs that always shove the top disc against the roof fix that. The window is a hole in that roof / side wall.
 
-Carousel vs twin-column at 44 mm:
+**Stroke (must be in this order)**
 
-| | Twin-column + priority throat | 3-shot carousel |
+1. Gate closed. Well A parked on the window. Top disc on the ceiling.
+2. Press: gate opens. One disc out. Gate **shuts** before anything turns.
+3. Same press or the return spring: ratchet rotates the cassette **180°**.
+4. Well B is now on the window. Its top disc was already on the ceiling.
+5. Next press repeats.
+
+If the wheel turns while the gate is open, a disc can fall into the gap and lock the rotor. That is the new jam, instead of the Y jam.
+
+**Fit:** two 18 mm wells, 180° apart, lives in **44 mm**. Does **not** fit 38 mm.
+
+Not four cylinders of two (needs ~51 mm). Not an 8-shot revolver. Not rotate-and-hope — followers are mandatory.
+
+| | Twin-column, fixed, one throat | 2×4 rotate 180° |
 |---|---|---|
-| Count in 44 mm | **8** | **3** (6 if two decks, more parts) |
-| Jam mode | double-feed at the Y — fixable with a one-disc neck | off-detent + crumbs in a pocket |
-| Gym move | same one button | button **and** they feel a rotary click, or the button ratchets the wheel |
-| Refill | pull cassette, 4+4 | pull wheel, fish 3 pockets |
-
-**Verdict:** a carousel does not get you more chews in a 44 mm stick. It gets you fewer, unless you accept a 50 mm+ body. If the point of 44 × 145 is **8 chews, shorter tube**, stay twin-column with a one-disc throat. Use a carousel only if you want a visible “click to next” toy and will live with 3 (or 6 on two decks).
+| Parts | 2 springs, 1 gate | 2 springs, 1 gate, ratchet + detents |
+| Jam | double-feed if the throat is sloppy | half-turn: stuck at 90°, or a disc in the race |
+| Feel | one click, one disc | click + a heavier clunk as 8 discs swing 180° |
+| Count | 8 | 8 |
+| Body | 44 × 145 | 44 × 145 |
 
 ---
 
@@ -92,7 +93,8 @@ Carousel vs twin-column at 44 mm:
 
 - Stay **38 × 190** single column — no new B invention.
 - Go **42 × 170** — same B, shorter C. Least risk.
-- Go **44 × 145** — twin-column, priority throat, **no open Y**, **no carousel**.
-- Carousel only with a written accept of 3 or 6 chews and ~46 mm+.
+- Go **44 × 145** fixed twin-column, **priority throat**, no rotate.
+- Go **44 × 145** **2×4 rotate-180** — no Y, add a ratchet, followers to a shared ceiling.
+- Carousel of 3 or 6 only with a written accept of fewer chews and ~46 mm+.
 
 Until a row is ticked, factories quote **38 × 190**.
