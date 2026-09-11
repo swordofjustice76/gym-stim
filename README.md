@@ -4,12 +4,6 @@ Reloadable aluminium gym/EDC stick. Three chambers: salt cap, chew magazine, BYO
 
 Repo: [swordofjustice76/gym-stim](https://github.com/swordofjustice76/gym-stim)
 
-## Concept board
-
-![Gym Stim Elite board](gym-stim-elite-board.jpg)
-
-Hero board: exploded Elite, 38 × 190 mm, salt cap / chew mag / 70 ml flask, configs, Daily pouch, later refill SKUs.
-
 ## Read in this order
 
 | File | What it is |
@@ -18,17 +12,16 @@ Hero board: exploded Elite, 38 × 190 mm, salt cap / chew mag / 70 ml flask, con
 | `gym-stim-product-brief.md` | Living product brief. Elite / Daily / AU empty-box launch. |
 | `gym-stim-PD-brief.md` | Damon’s ID/ME brief. Architectures, mechanism menus, visual boards. |
 | `gym-stim-V1.md` | Mechanism down-select. What to actually tool first. |
+| `gym-stim-sizing.md` | 38 / 42 / 44 body options, Y-jam, carousel pocket math. |
+| `gym-stim-RENDER-BRIEF.md` | Paste for GPT renders. Overrides stale CAD. |
 | `gym-stim-manufacturers.md` | SEQ proto + food CMO map. |
-| `gym-stim-elite-board.jpg` | Concept board (upload the jpg if the preview is broken). |
-
-Scale spreadsheet lives in the project folder as `GymStim_3Scenario_Model.xlsx` (not in git).
 
 ## Locked hardware
 
 - 38 mm × 190 mm, 6061-T6, type II anodise, clip
-- A = replaceable 3–4 ml salt cap
-- B = 10-tab cassette, ~16 mm chews
-- C = 70 ml screw-off flask (70 ml is volume, not “three scoops”)
+- A = bayonet top puck. Elite = sniff (3–4 ml NH3). Chalk puck (32×12 mm MgCO3 wafer) is a later SKU on the same latch
+- B = 8 Fastchew-class discs, ~22 mm cassette, spring clicker
+- C = twist-index 3-cell BYO powder carrier
 
 ## Locked launch (AU)
 
