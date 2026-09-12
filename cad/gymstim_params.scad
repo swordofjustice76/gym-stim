@@ -1,15 +1,15 @@
-// Gym Stim — locked dimensions
-// 44 x 145 Option C. 11 Sep 2026.
-// Twin-column chews, priority throat, NO rotate magazine.
-// C = three 120 deg wedges + rotating orifice plate.
+// Gym Stim — V2 locked dimensions
+// 44 x 175. 12 Sep 2026.
+// Twin-column chews, priority throat, NO rotate.
+// C = three session wedges + ear dump (see gym-stim-V2.md). Orifice plate retired.
 
 OD = 44;
-L = 145;
+L = 175;
 wall = 2.0;
 ID = OD - 2*wall;
 
 orifice_h = 8;
-wedge_h = 59;
+wedge_h = 96;
 c_h = orifice_h + wedge_h;
 div = 1.2;
 b_h = 40;
